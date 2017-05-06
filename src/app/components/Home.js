@@ -1,6 +1,19 @@
 import React from "react";
 
 export class Home extends React.Component {
+    constructor(props){
+        super();
+        this.state = {
+            age: props.initialAge
+        }
+    }
+
+    increaseMyAge(){
+        this.setState({
+            age: this.state.age + 3
+        });
+    }
+
     render(){
         let name= 'Prashant';
         name = "Mr. " + name;
@@ -9,7 +22,11 @@ export class Home extends React.Component {
                 This is my Content and My Name is {name}
                 <br/>
                 <br/>
-                <div>My Name is {this.props.name} {this.props.info.surname} and I'm {this.props.age} yrs old.</div>
+                <div>
+                    <p>My Name is {this.props.name} {this.props.info.surname} and I'm <strong>{this.state.age}</strong> yrs old.</p>
+                    <button onClick={() => this.increaseMyAge()} className="btn btn-primary">Increase My Age</button>
+                </div>
+                <hr/>
                 <br/>
                 My hobbies are :
                 <ul>
@@ -26,7 +43,7 @@ export class Home extends React.Component {
 
 Home.propTypes = {
     name: React.PropTypes.string,
-    age: React.PropTypes.number,
+    initialAge: React.PropTypes.number,
     info: React.PropTypes.object,
     children: React.PropTypes.element.isRequired
 }

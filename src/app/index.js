@@ -16,7 +16,7 @@ class MyElement extends React.Component {
                 </div>
                 <div className="row">
                     <div className="col-xs-10 col-xs-offset-1">
-                        <Home name={"Prashant"} age={27} info={info}>
+                        <Home name={"Prashant"} initialAge={27} info={info}>
                             <p>Yes this is content inside <strong>Home Tag</strong> and can be accessed using <strong>this.props.children</strong></p>
                         </Home>
                     </div>
