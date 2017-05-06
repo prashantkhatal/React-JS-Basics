@@ -6,6 +6,7 @@ import {Home} from "./components/Home";
 
 class MyElement extends React.Component {
     render(){
+        let info = {surname:'Khatal', hobbies: ['bike riding','repairing']}
         return (
             <div className="container">
                 <div className="row">
@@ -15,7 +16,9 @@ class MyElement extends React.Component {
                 </div>
                 <div className="row">
                     <div className="col-xs-10 col-xs-offset-1">
-                        <Home/>
+                        <Home name={"Prashant"} age={27} info={info}>
+                            <p>Yes this is content inside <strong>Home Tag</strong> and can be accessed using <strong>this.props.children</strong></p>
+                        </Home>
                     </div>
                 </div>
                 <div className="row">
