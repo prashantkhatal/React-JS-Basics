@@ -26,6 +26,7 @@ export class Home extends React.Component {
         name = "Mr. " + name;
         return(
             <div>
+                <h1>Home Page</h1>
                 This is my Content and My Name is {name}
                 <br/><br/>
                 <div>
