@@ -1,15 +1,17 @@
 import React from "react";
 
-import Header from "./Header";
+import {Header} from "./Header";
 
 export class Root extends React.Component {
+
     render() {
+        let menus = ["Home", "User"];
+
         return (
             <div className="container">
                 <div className="row">
                     <div className="col-xs-10 col-xs-offset-1">
-                        <Header link="Home"/>
-                        <Header link="User"/>
+                        <Header menus={menus}/>
                     </div>
                 </div>
                 <div className="row">

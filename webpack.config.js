@@ -7,8 +7,8 @@ var SRC_DIR = path.resolve(__dirname, 'src');
 
 
 var config = {
-    // entry: SRC_DIR + '/app/index.js',
-    entry: SRC_DIR + '/app/index_router.js',
+    entry: SRC_DIR + '/app/index.js',
+    // entry: SRC_DIR + '/app/index_router.js',
     output:{
 		path: DIST_DIR + '/app',
 		filename: 'bundle.js',
