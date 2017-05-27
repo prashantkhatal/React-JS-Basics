@@ -3,7 +3,6 @@ import {render} from "react-dom";
 
 import {CodeEditor} from "./components/CodeEditor";
 import {TransformedCode} from "./components/TransformedCode";
-import {transform} from "babel-core";
 
 class BabelTranformer extends React.Component {
 
@@ -16,10 +15,9 @@ class BabelTranformer extends React.Component {
     }
 
     updateCode(e){
-        console.log('yes here');
         this.setState({
             ...this.state,
-            output: transform(e.target.input.value,{presets:['es2015']}).code
+            output: e.target.value.toUpperCase()    //Need to Update code using babel transform
         });
     }
 
